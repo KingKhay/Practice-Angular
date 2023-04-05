@@ -1,0 +1,20 @@
+<h1>Welcome to Video Streamer</h1>
+
+<p>Users List</p>
+
+<p *ngIf="selectedUser"> {{ selectedUser | json }} </p>
+
+<input type="text" required placeholder="company" id="company" #company>
+<input type="text" required placeholder="contact" id="contact" #contact>
+<input type="text" required placeholder="country" id="country" #country>
+<button (click)="addUser(company.value, contact.value, country.value )">Add User</button>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+    <th>Select Room</th>
+  </tr>
+    <app-user-table [users]="usersList" (selectedUser)="selectUser($event)"></app-user-table>
+</table>

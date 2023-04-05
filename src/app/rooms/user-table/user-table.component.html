@@ -1,0 +1,9 @@
+<app-header [title]="title"></app-header>
+<tr *ngFor="let user of users; let odd = odd; let even = even" [ngClass]="{'even': even, 'odd': odd}">
+  <td>{{ user.company }}</td>
+  <td>{{ user.contact }}</td>
+  <td>{{ user.country }}</td>
+  <td>
+    <button class="p-2.5 border-2 m-2 rounded-2xl bg-amber-200" (click)="selectUser(user)">Select</button>
+  </td>
+</tr>
