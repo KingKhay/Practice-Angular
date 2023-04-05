@@ -18,4 +18,8 @@ export class TableService {
     console.log("Post Method Called")
     return this.http.post("/api/v1/people", person);
   }
+
+  updatePerson(id: string, person: IPerson) {
+    return this.http.put("/api/v1/people/" + id,person);
+  }
 }
