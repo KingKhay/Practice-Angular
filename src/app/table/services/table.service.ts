@@ -21,7 +21,7 @@ export class TableService {
   constructor(private http: HttpClient) { }
 
   getPeople(): Observable<IPerson[]>{
-    const headers = new HttpHeaders({'Key':'Value'});
+    const headers = new HttpHeaders({'Key':'Value'}).append('Token','TokenValue');
 
     return this.http.get<IPerson[]>("/api/v1/people",{headers: headers}).pipe(shareReplay(), catchError(this.handleError));
   }
