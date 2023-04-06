@@ -32,6 +32,7 @@ export class TableService {
   }
 
   updatePerson(id: string, person: IPerson) {
+    console.log("Update Method Called")
     return this.http.put<IPerson>(`/api/v1/people/${id}`, person);
   }
 
