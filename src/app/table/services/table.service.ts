@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpRequest} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpRequest} from "@angular/common/http";
 import {IPerson} from "../../rooms/services/rooms.service";
 import {catchError, Observable, shareReplay, throwError} from "rxjs";
 
@@ -21,7 +21,9 @@ export class TableService {
   constructor(private http: HttpClient) { }
 
   getPeople(): Observable<IPerson[]>{
-    return this.http.get<IPerson[]>("/api/v1/people").pipe(shareReplay(), catchError(this.handleError));
+    const headers = new HttpHeaders({'Key':'Value'});
+
+    return this.http.get<IPerson[]>("/api/v1/people",{headers: headers}).pipe(shareReplay(), catchError(this.handleError));
   }
 
   addPerson(person: IPerson) {
