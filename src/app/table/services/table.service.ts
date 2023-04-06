@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpRequest} from "@angular/common/http";
 import {IPerson} from "../../rooms/services/rooms.service";
-import {Observable} from "rxjs";
+import {Observable, shareReplay} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class TableService {
   constructor(private http: HttpClient) { }
 
   getPeople(): Observable<IPerson[]>{
-    return this.http.get<IPerson[]>("/api/v1/people");
+    return this.http.get<IPerson[]>("/api/v1/people").pipe(shareReplay());
   }
 
   addPerson(person: IPerson) {
