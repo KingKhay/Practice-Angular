@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpRequest} from "@angular/common/http";
 import {IPerson} from "../../rooms/services/rooms.service";
 import {Observable} from "rxjs";
 
@@ -16,10 +16,17 @@ export class TableService {
 
   addPerson(person: IPerson) {
     console.log("Post Method Called")
-    return this.http.post("/api/v1/people", person);
+    return this.http.post<IPerson>("/api/v1/people", person);
   }
 
   updatePerson(id: string, person: IPerson) {
-    return this.http.put("/api/v1/people/" + id,person);
+    return this.http.put<IPerson>(`/api/v1/people/${id}`, person);
+  }
+
+  getPhotos(){
+    const request = new HttpRequest('GET', 'https://jsonplaceholder.typicode.com/photos',{
+      reportProgress: true,
+    })
+    return this.http.request(request);
   }
 }
