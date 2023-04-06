@@ -6,7 +6,7 @@ import {TableComponent} from "./table/table.component";
 const routes: Routes = [
   {path: 'employees', component: EmployeeComponent},
   {path: 'rooms', component: TableComponent},
-  {path: '', redirectTo: 'rooms', pathMatch: 'full'}
+  {path: '', redirectTo: 'rooms', pathMatch: 'full'},
 ];
 
 @NgModule({
