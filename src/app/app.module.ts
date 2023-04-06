@@ -11,6 +11,7 @@ import {APP_CONFIG, APP_SERVICE_CONFIG} from "./AppConfig/appconfig.service";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TableComponent} from './table/table.component';
 import {RequestInterceptor} from "./request.interceptor";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {RequestInterceptor} from "./request.interceptor";
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     {
