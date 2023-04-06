@@ -22,7 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   @ViewChild('roomComponent', {read: ViewContainerRef}) vcr!: ViewContainerRef;
 
   ngAfterViewInit(): void {
-        this.vcr.createComponent(RoomsComponent);
+        // this.vcr.createComponent(RoomsComponent);
     }
 
 

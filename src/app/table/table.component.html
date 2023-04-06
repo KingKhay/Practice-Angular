@@ -1,8 +1,22 @@
-<ul *ngFor="let person of people">
-  <li>{{person.name}}</li>
-  <li>{{person.age}}</li>
-</ul>
+<div>
+  <p *ngIf="stream$ | async as response"></p>
+  <ul *ngFor="let person of people">
+    <li>{{person.name}}</li>
+    <li>{{person.age}}</li>
+  </ul>
+</div>
 
 <button (click)="makePostRequest()">Post Method</button>
 
-<button (click)="makePostRequest()">Put Method</button>
+<br>
+<br>
+<br>
+<br>
+
+<button (click)="makePutRequest()">Put Method</button>
+
+<br>
+<br>
+<br>
+
+<button (click)="getPhotos()">Get Photos Method</button>
