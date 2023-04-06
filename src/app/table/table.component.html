@@ -6,17 +6,23 @@
   </ul>
 </div>
 
-<button (click)="makePostRequest()">Post Method</button>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="makePostRequest()">Post Method</button>
 
 <br>
 <br>
 <br>
 <br>
 
-<button (click)="makePutRequest()">Put Method</button>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="makePutRequest()">Put Method</button>
 
 <br>
 <br>
 <br>
 
-<button (click)="getPhotos()">Get Photos Method</button>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="getPhotos()">Get Photos Method</button>
+
+<br>
+<br>
+<br>
+
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" [routerLink]="'/employees'">Redirect to Employees</button>

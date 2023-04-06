@@ -21,6 +21,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ErrorComponent } from './error/error.component';
+import { RoomsBookingComponent } from './rooms/rooms-booking/rooms-booking.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ErrorComponent } from './error/error.component';
     TableComponent,
     NavComponent,
     ErrorComponent,
+    RoomsBookingComponent,
 
   ],
   imports: [

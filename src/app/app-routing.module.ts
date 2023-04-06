@@ -3,10 +3,12 @@ import {NgModule} from "@angular/core";
 import {EmployeeComponent} from "./employee/employee.component";
 import {TableComponent} from "./table/table.component";
 import {ErrorComponent} from "./error/error.component";
+import {RoomsBookingComponent} from "./rooms/rooms-booking/rooms-booking.component";
 
 const routes: Routes = [
   {path: 'employees', component: EmployeeComponent},
   {path: 'rooms', component: TableComponent},
+  {path: 'rooms/:id', component: RoomsBookingComponent},
   {path: '', redirectTo: 'rooms', pathMatch: 'full'},
   {path: '**', component: ErrorComponent}
 ];

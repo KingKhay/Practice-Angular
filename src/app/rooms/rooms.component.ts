@@ -13,7 +13,7 @@ export class RoomsComponent implements OnInit{
   constructor(private roomsService: RoomsService) {
   }
 
-  stream = new Observable<string>(observer => {
+  stream$ = new Observable<string>(observer => {
     observer.next('user1');
     observer.next('user2');
     observer.next('user3');
@@ -22,7 +22,7 @@ export class RoomsComponent implements OnInit{
 
   usersList: User[] = [];
   ngOnInit(): void {
-    this.stream.subscribe((data) => console.log(data));
+    this.stream$.subscribe((data) => console.log(data));
     this.usersList = this.roomsService.getRooms();
 
   }
