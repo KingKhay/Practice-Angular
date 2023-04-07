@@ -22,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ErrorComponent } from './error/error.component';
 import { RoomsBookingComponent } from './rooms/rooms-booking/rooms-booking.component';
+import { UserAddComponent } from './user-add/user-add.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RoomsBookingComponent } from './rooms/rooms-booking/rooms-booking.compo
     NavComponent,
     ErrorComponent,
     RoomsBookingComponent,
+    UserAddComponent,
 
   ],
   imports: [

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {Observable} from "rxjs";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-rooms-booking',
@@ -11,10 +13,11 @@ export class RoomsBookingComponent implements OnInit{
   constructor(private router: ActivatedRoute ) {
   }
 
-  id!: number;
+
+  id$ = this.router.paramMap.pipe(map(params => params.get('id')));
 
   ngOnInit(): void {
-    this.router.params.subscribe(params => this.id = params['id']);
+
   }
 
 
