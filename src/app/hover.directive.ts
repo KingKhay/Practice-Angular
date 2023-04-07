@@ -1,10 +1,11 @@
-import {Directive, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input, OnInit, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appHover]'
 })
 export class HoverDirective implements OnInit{
 
+  @Input()
   color: string = 'red';
   constructor(private element: ElementRef, private renderer: Renderer2) {
     console.log(element.nativeElement)
@@ -14,9 +15,9 @@ export class HoverDirective implements OnInit{
 
   }
 
-  @HostListener('hover')
+  @HostListener('mouseenter')
   onHover(){
-    this.renderer.setStyle(this.element.nativeElement,'color','blue');
+    console.log("Mouse Enter")
   }
 
 
