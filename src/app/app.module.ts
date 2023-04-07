@@ -23,6 +23,9 @@ import { MatListModule } from '@angular/material/list';
 import { ErrorComponent } from './error/error.component';
 import { RoomsBookingComponent } from './rooms/rooms-booking/rooms-booking.component';
 import { UserAddComponent } from './user-add/user-add.component';
+import { FormsModule } from "@angular/forms";
+import { LoginComponent } from './login/login.component';
+import { HoverDirective } from './hover.directive';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,8 @@ import { UserAddComponent } from './user-add/user-add.component';
     ErrorComponent,
     RoomsBookingComponent,
     UserAddComponent,
+    LoginComponent,
+    HoverDirective,
 
   ],
   imports: [
@@ -49,7 +54,8 @@ import { UserAddComponent } from './user-add/user-add.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [
     {
