@@ -1,4 +1,4 @@
-import {Directive, ElementRef, OnInit} from '@angular/core';
+import {Directive, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appHover]'
@@ -6,12 +6,17 @@ import {Directive, ElementRef, OnInit} from '@angular/core';
 export class HoverDirective implements OnInit{
 
   color: string = 'red';
-  constructor(private element: ElementRef) {
+  constructor(private element: ElementRef, private renderer: Renderer2) {
     console.log(element.nativeElement)
   }
 
   ngOnInit() {
 
+  }
+
+  @HostListener('hover')
+  onHover(){
+    this.renderer.setStyle(this.element.nativeElement,'color','blue');
   }
 
 
