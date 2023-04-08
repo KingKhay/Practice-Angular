@@ -47,6 +47,9 @@ import {HeaderModule} from "./header/header.module";
   imports: [
     BrowserModule,
     HttpClientModule,
+    RoomsModule,
+    UserTableModule,
+    HeaderModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
@@ -56,9 +59,6 @@ import {HeaderModule} from "./header/header.module";
     MatIconModule,
     MatListModule,
     FormsModule,
-    RoomsModule,
-    UserTableModule,
-    HeaderModule,
   ],
   providers: [
     {
