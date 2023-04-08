@@ -12,37 +12,37 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TableComponent} from './table/table.component';
 import {RequestInterceptor} from "./request.interceptor";
 import {AppRoutingModule} from "./app-routing.module";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavComponent } from './nav/nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { ErrorComponent } from './error/error.component';
-import { RoomsBookingComponent } from './rooms/rooms-booking/rooms-booking.component';
-import { UserAddComponent } from './user-add/user-add.component';
-import { FormsModule } from "@angular/forms";
-import { LoginComponent } from './login/login.component';
-import { HoverDirective } from './hover.directive';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NavComponent} from './nav/nav.component';
+import {LayoutModule} from '@angular/cdk/layout';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {ErrorComponent} from './error/error.component';
+import {RoomsBookingComponent} from './rooms/rooms-booking/rooms-booking.component';
+import {UserAddComponent} from './user-add/user-add.component';
+import {FormsModule} from "@angular/forms";
+import {LoginComponent} from './login/login.component';
+import {HoverDirective} from './hover.directive';
+import {EmailValidatorDirective} from './emailValidator/email-validator.directive';
+import {RoomsModule} from "./rooms/rooms.module";
+import {UserTableModule} from "./rooms/user-table/user-table.module";
+import {HeaderModule} from "./header/header.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoomsComponent,
-    UserTableComponent,
-    HeaderComponent,
     ContainerComponent,
     EmployeeComponent,
     TableComponent,
     NavComponent,
     ErrorComponent,
-    RoomsBookingComponent,
     UserAddComponent,
     LoginComponent,
     HoverDirective,
-
+    EmailValidatorDirective,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +55,10 @@ import { HoverDirective } from './hover.directive';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    RoomsModule,
+    UserTableModule,
+    HeaderModule,
   ],
   providers: [
     {

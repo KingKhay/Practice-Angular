@@ -1,6 +1,7 @@
 <form>
   <div>
-    <input appHover color="yellow" type="email" name="email" [(ngModel)]="email" placeholder="email">
+    <input appEmailValidator #emailInput="ngModel" appHover color="yellow" type="email" name="email" [(ngModel)]="email" placeholder="email">
+    <p>{{emailInput.errors | json}}</p>
   </div>
   <div>
     <input appHover color="red" type="password" name="password" [(ngModel)]="password" placeholder="password">
