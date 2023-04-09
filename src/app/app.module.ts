@@ -26,6 +26,7 @@ import {EmailValidatorDirective} from './emailValidator/email-validator.directiv
 import {RoomsModule} from "./rooms/rooms.module";
 import {UserTableModule} from "./rooms/user-table/user-table.module";
 import {HeaderModule} from "./header/header.module";
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {HeaderModule} from "./header/header.module";
     LoginComponent,
     HoverDirective,
     EmailValidatorDirective,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,
