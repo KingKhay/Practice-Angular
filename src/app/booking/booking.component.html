@@ -4,6 +4,21 @@
 {{ bookingForm.pristine}}
 {{ bookingForm.dirty}}
 
-<form>
+<!--roomId: [''],-->
+<!--guestEmail: [''],-->
+<!--guestName: [''],-->
+<!--guestCity: [''],-->
+<!--guestMobileNumber: [''],-->
 
+<form [formGroup]="bookingForm">
+  <input type="text" formControlName="roomId" placeholder="Room Id">
+  <br>
+  <input type="text" formControlName="guestEmail" placeholder="Email">
+  <br>
+  <input type="text" formControlName="guestName" placeholder="Name">
+  <br>
+  <input type="text" formControlName="guestCity" placeholder="City">
+  <br>
+  <input type="text" formControlName="guestMobileNumber" placeholder="Mobile Number">
+  <br>
 </form>
