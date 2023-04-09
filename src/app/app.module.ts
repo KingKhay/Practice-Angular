@@ -2,9 +2,6 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
-import {RoomsComponent} from './rooms/rooms.component';
-import {UserTableComponent} from './rooms/user-table/user-table.component';
-import {HeaderComponent} from './header/header.component';
 import {ContainerComponent} from './container/container.component';
 import {EmployeeComponent} from './employee/employee.component';
 import {APP_CONFIG, APP_SERVICE_CONFIG} from "./AppConfig/appconfig.service";
@@ -21,7 +18,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {ErrorComponent} from './error/error.component';
-import {RoomsBookingComponent} from './rooms/rooms-booking/rooms-booking.component';
 import {UserAddComponent} from './user-add/user-add.component';
 import {FormsModule} from "@angular/forms";
 import {LoginComponent} from './login/login.component';
