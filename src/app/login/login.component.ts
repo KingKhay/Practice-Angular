@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {filter} from "rxjs";
+import {LoginService} from "./services/login.service";
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,12 @@ export class LoginComponent implements OnInit{
   password: string = '';
   email: string= '';
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private loginService: LoginService) {
   }
 
   login() {
-    if(this.email === "admin@gmail.com" && this.password === "admin"){
-      this.router.navigate(['/users', 'add']);
+    if(this.loginService.login(this.email, this.password)){
+      this.router.navigate(['/rooms']);
     }
   }
 
