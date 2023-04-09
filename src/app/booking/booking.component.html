@@ -10,7 +10,7 @@
 <!--guestCity: [''],-->
 <!--guestMobileNumber: [''],-->
 
-<form [formGroup]="bookingForm">
+<form [formGroup]="bookingForm" (ngSubmit)="addBooking()">
   <input type="text" formControlName="roomId" placeholder="Room Id">
   <br>
   <input type="text" formControlName="guestEmail" placeholder="Email">
@@ -21,4 +21,12 @@
   <br>
   <input type="text" formControlName="guestMobileNumber" placeholder="Mobile Number">
   <br>
+  <div formGroupName="address">
+    <input type="text" formControlName="addressLine1" placeholder="AddressLine 1">
+    <br>
+    <input type="text" formControlName="addressLine2" placeholder="AddressLine 2">
+    <br>
+    <input type="text" formControlName="state" placeholder="State">
+    <br>
+  </div>
 </form>

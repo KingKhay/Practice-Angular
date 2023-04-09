@@ -16,6 +16,16 @@ export class BookingComponent {
       guestName: [''],
       guestCity: [''],
       guestMobileNumber: [''],
+      address: this.fb.group({
+        addressLine1: [''],
+        addressLine2: [''],
+        state: [''],
+      }),
     })
+  }
+
+  addBooking() {
+    //Use getRawValue instead of value.
+    console.log(this.bookingForm.getRawValue())
   }
 }
