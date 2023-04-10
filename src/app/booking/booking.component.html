@@ -12,6 +12,7 @@
 
 <form [formGroup]="bookingForm" (ngSubmit)="addBooking()">
   <input type="text" formControlName="roomId" placeholder="Room Id">
+  <p *ngIf="bookingForm.get('roomId')?.hasError('required')">Id is Required</p>
   <br>
   <input type="text" formControlName="guestEmail" placeholder="Email">
   <br>
@@ -29,4 +30,5 @@
     <input type="text" formControlName="state" placeholder="State">
     <br>
   </div>
+  <button type="submit" [disabled]="bookingForm.invalid">Submit</button>
 </form>
